@@ -494,7 +494,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_sub_module \
     libmmcamera_isp_template \
     libmmcamera_isp_wb40 \
-    libmmcamera_llvd \
     libmmcamera_mot_imx214 \
     libmmcamera_optizoom_lib \
     libmmcamera_ov13855_f13855ab \
@@ -512,7 +511,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_stillmore_lib \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
-    libmmcamera_trueportrait_lib \
     libmmcamera_ubifocus_lib \
     libmmcamera_vstab_module \
     libmmjpeg \
@@ -548,8 +546,6 @@ PRODUCT_PACKAGES += \
     lib-siputility \
     libGPreqcancel \
     libGPreqcancel_svc \
-    libSecureUILib \
-    libStDrvInt \
     libbt-hidlclient \
     libbtnv \
     libcacertclient \
@@ -607,8 +603,6 @@ PRODUCT_PACKAGES += \
     libril-qcril-hook-oem \
     librilqmiservices \
     librpmb \
-    libsecureui \
-    libsecureui_svcsock \
     libsettings \
     libsoc_helper \
     libspl \
