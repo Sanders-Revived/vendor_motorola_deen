@@ -529,7 +529,6 @@ PRODUCT_PACKAGES += \
     libqomx_jpegenc \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
-    libtinyalsa \
     libtinycompress \
     libtinycompress_vendor \
     libunshorten \
