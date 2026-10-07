@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/deen/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
+    vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
@@ -90,10 +90,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/deen/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
-    vendor/motorola/deen/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.1-service.rc \
+    vendor/motorola/deen/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
-    vendor/motorola/deen/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
-    vendor/motorola/deen/proprietary/vendor/etc/lm/AdaptLaunchFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AdaptLaunchFeature.xml \
     vendor/motorola/deen/proprietary/vendor/etc/motorola/mdmctbk/ctbk_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/motorola/mdmctbk/ctbk_cfg.xml \
     vendor/motorola/deen/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/motorola/deen/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
@@ -106,6 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/deen/proprietary/vendor/etc/wifi/WCNSS_qcom_wlan_nv_India.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_India.bin \
     vendor/motorola/deen/proprietary/vendor/etc/wifi/WCNSS_qcom_wlan_nv_epa.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv_epa.bin \
     vendor/motorola/deen/proprietary/vendor/etc/wifi/WCNSS_wlan_dictionary.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_wlan_dictionary.dat \
+    vendor/motorola/deen/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
     vendor/motorola/deen/proprietary/vendor/firmware/a530_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_gpmu.fw2 \
     vendor/motorola/deen/proprietary/vendor/firmware/a530_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pfp.fw \
     vendor/motorola/deen/proprietary/vendor/firmware/a530_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pm4.fw \
@@ -155,9 +154,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.keymaster@3.0-impl-qti \
     gatekeeper.msm8953 \
-    vendor.qti.gnss@3.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
-    vendor.qti.hardware.iop@2.0-impl \
     vulkan.msm8953 \
     lib-imscmservice \
     lib-imsdpl \
@@ -170,20 +167,9 @@ PRODUCT_PACKAGES += \
     lib-rtpcore \
     lib-rtpsl \
     lib-uceservice \
-    libApeSwDec \
     libC2D2 \
     libCB \
-    libFlacSwDec \
     libI420colorconvert \
-    libOmxAacDec \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxApeDecSw \
-    libOmxEvrcDec \
-    libOmxG711Dec \
-    libOmxQcelp13Dec \
-    libOmxWmaDec \
     libOpenCL \
     libQSEEComAPI \
     libacdb-fts \
@@ -231,13 +217,9 @@ PRODUCT_PACKAGES += \
     libmmcamera_tintless_bg_pca_algo \
     libmmosal_proprietary \
     libnetmgr \
-    liboemcrypto \
     liboptizoom \
     libpdmapper \
     libpdnotifier \
-    libperfconfig \
-    libperfgluelayer \
-    libperipheral_client \
     libqcci_legacy \
     libqcmaputils \
     libqdi \
@@ -250,11 +232,6 @@ PRODUCT_PACKAGES += \
     libqmi_csi \
     libqmi_encdec \
     libqmiservices \
-    libqti-iopd-client \
-    libqti-perfd-client \
-    libqti-perfd \
-    libqti-util \
-    libqti-utils \
     libqtigef \
     libqtikeymaster4 \
     libscalar \
@@ -281,24 +258,14 @@ PRODUCT_PACKAGES += \
     libtinyxml2_1 \
     libubifocus \
     libvideoutils \
-    libwvdrmengine \
     sensor_calibrate \
     sensors.rp \
     sensors.ssc \
     vendor.display.color@1.0 \
     vendor.display.postproc@1.0 \
     vendor.egistec.hardware.fingerprint@2.0 \
-    vendor.qti.gnss@1.0 \
-    vendor.qti.gnss@1.1 \
-    vendor.qti.gnss@1.2 \
-    vendor.qti.gnss@2.0 \
-    vendor.qti.gnss@2.1 \
-    vendor.qti.gnss@3.0-service \
-    vendor.qti.gnss@3.0 \
     vendor.qti.hardware.data.connection@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
-    vendor.qti.hardware.iop@1.0 \
-    vendor.qti.hardware.iop@2.0 \
     vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
@@ -337,7 +304,6 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.default \
     libDepthBokehEffect \
     libDepthBokehEffect2 \
-    libOmxDsdDec \
     lib_mot_app6_metadata \
     lib_mot_led_calibration \
     lib_motsensorlistener \
@@ -461,7 +427,6 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k4h7_video_full \
     libchromatix_s5k4h7_zsl_preview_3a \
     libchromatix_s5k4h7_zsl_video_3a \
-    libcppf \
     libflash_pmic \
     libgralloc1 \
     libjpegdhw \
@@ -573,19 +538,22 @@ PRODUCT_PACKAGES += \
     motorola.hardware.audio.adspd@1.0_vendor \
     libmmieffectswrapper \
     libspeakerbundle \
-    com.qualcomm.qti.ant@1.0 \
     android.hardware.bluetooth@1.0-impl-qti \
-    vendor.qti.hardware.bluetooth_sar@1.0-impl \
-    vendor.qti.hardware.qteeconnector@1.0-impl \
+    com.dsi.ant@1.0-impl \
+    vendor.qti.gnss@4.0-impl \
+    vendor.qti.hardware.bluetooth_sar@1.1-impl \
+    vendor.qti.hardware.btconfigstore@1.0-impl \
+    vendor.qti.hardware.btconfigstore@2.0-impl \
     lib-siputility \
     libGPreqcancel \
     libGPreqcancel_svc \
     libSecureUILib \
-    libadaptlaunch \
-    libappclassifier \
+    libStDrvInt \
     libbt-hidlclient \
     libbtnv \
     libcacertclient \
+    libcdfw \
+    libcdfw_remote_api \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -596,33 +564,40 @@ PRODUCT_PACKAGES += \
     libdrmtime \
     libets_fp_et5 \
     libets_teeclient \
-    libgameoptfeature \
-    libgarden \
-    libgarden_haltests_e2e \
     libgdtap \
+    libgnsspps \
     libhdcpsrm \
     libizat_client_api \
     libizat_core \
     liblbs_core \
-    liblearningmodule \
     libloc_api_v02 \
+    libloc_socket \
     liblocationservice \
     liblocationservice_glue \
     liblowi_client \
     liblowi_wifihal \
-    libmeters-ns \
-    libmeters \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
+    liboemcrypto \
+    libops \
+    libperfconfig \
+    libperfgluelayer \
+    libperfioctl \
+    libperipheral_client \
     libpn553_fw \
+    libqcc_file_agent \
     libqcrilFramework \
     libqcrildatactl \
-    libqdma_file_agent \
     libqisl \
     libqrtr \
     libqsocket \
+    libqti-perfd-client-vendor \
+    libqti-perfd-client \
+    libqti-perfd \
+    libqti-util-vendor \
+    libqti-util \
     librcc \
     libril-qc-hal-qmi \
     libril-qc-ltedirectdisc \
@@ -631,9 +606,11 @@ PRODUCT_PACKAGES += \
     libril-qcril-hook-oem \
     librilqmiservices \
     librpmb \
+    libsecureui \
+    libsecureui_svcsock \
     libsettings \
-    libskewknob \
-    libslimclient \
+    libsoc_helper \
+    libspl \
     libssd \
     libsystem_health_mon \
     libthermalioctl \
@@ -647,7 +624,16 @@ PRODUCT_PACKAGES += \
     qtibus \
     qtimutex \
     vendor.qti.data.factory@2.0 \
+    vendor.qti.gnss@1.0 \
+    vendor.qti.gnss@1.1 \
+    vendor.qti.gnss@1.2 \
+    vendor.qti.gnss@2.0 \
+    vendor.qti.gnss@2.1 \
+    vendor.qti.gnss@3.0 \
+    vendor.qti.gnss@4.0-service \
+    vendor.qti.gnss@4.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
+    vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
@@ -659,8 +645,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.qmi@1.0 \
     vendor.qti.hardware.factory@1.0 \
     vendor.qti.hardware.factory@1.1 \
-    vendor.qti.hardware.qteeconnector@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.latency@2.0 \
+    vendor.qti.memory.pasrmanager@1.0 \
+    vendor.qti.memory.pasrmanager@1.1 \
     libadsp_fd_skel \
     libapps_mem_heap \
     libdspCV_skel \
@@ -688,10 +676,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@1.0 \
     vendor.qti.imsrtpservice@2.0 \
     vendor.qti.imsrtpservice@2.1 \
-    libqti-at \
-    libqti-iopd-client_system \
-    libqti-perfd-client_system \
-    libqti_performance \
+    com.qualcomm.qti.ant@1.0 \
     CneApp \
     TimeService \
     QtiTelephonyService \
@@ -718,28 +703,27 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.callinfo-V1.0-java \
     vendor.qti.ims.rcsconfig-V1.0-java \
     vendor.qti.latency-V2.0-java \
+    manifest_android.hardware.drm@1.4-service.widevine.xml \
+    vendor.qti.gnss@4.0-service.xml \
     adpl \
     adsprpcd \
     capsense_reset \
     charge_only_mode \
     cnd \
     cnss-daemon \
-    energy-awareness \
     fm_qsoc_patches \
-    garden_app \
     hvdcp_opti \
     android.hardware.biometrics.fingerprint@2.1-service-ets \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.drm@1.2-service.widevine \
+    android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@3.0-service-qti \
     android.hardware.keymaster@4.0-service-qti \
     motorola.hardware.audio.adspd@1.0-service \
     qcrild \
     vendor.display.color@1.0-service \
-    vendor.qti.hardware.perf@2.1-service \
+    vendor.qti.hardware.perf@2.2-service \
     vendor.qti.hardware.qdutils_disp@1.0-service-qti \
-    vendor.qti.hardware.qteeconnector@1.0-service \
     ims_rtp_daemon \
     imsdatadaemon \
     imsqmidaemon \
@@ -751,7 +735,6 @@ PRODUCT_PACKAGES += \
     mm-pp-dpps \
     mm-qcamera-app \
     mm-qcamera-daemon \
-    msm_irqbalance \
     netmgrd \
     pm-proxy \
     pm-service \
@@ -764,9 +747,7 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine \
     time_daemon \
-    xtra-daemon \
-    xtwifi-client \
-    xtwifi-inet-agent
+    xtra-daemon
 
 PRODUCT_PACKAGES += \
     vendor_firmware_wlan_prima_WCNSS_qcom_wlan_nv_bin \
