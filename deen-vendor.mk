@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl-qti \
     gatekeeper.msm8953 \
     vendor.qti.hardware.fm@1.0-impl \
+    vendor.qti.hardware.fm@1.0 \
     vulkan.msm8953 \
     lib-imscmservice \
     lib-imsdpl \
