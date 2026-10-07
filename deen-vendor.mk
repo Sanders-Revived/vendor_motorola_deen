@@ -736,7 +736,6 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
-    qmi_motext_hook \
     qseecomd \
     qti \
     rmt_storage \
