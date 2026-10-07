@@ -238,6 +238,7 @@ PRODUCT_PACKAGES += \
     libscalar \
     libscveBlobDescriptor \
     libscveBlobDescriptor_stub \
+    libcdsprpc \
     libscveCommon \
     libscveCommon_stub \
     libscveObjectSegmentation \
