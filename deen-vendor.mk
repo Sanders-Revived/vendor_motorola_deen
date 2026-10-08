@@ -237,17 +237,7 @@ PRODUCT_PACKAGES += \
     libqtigef \
     libqtikeymaster4 \
     libscalar \
-    libscveBlobDescriptor \
-    libscveBlobDescriptor_stub \
     libcdsprpc \
-    libscveCommon \
-    libscveCommon_stub \
-    libscveObjectSegmentation \
-    libscveObjectSegmentation_stub \
-    libscveObjectTracker \
-    libscveObjectTracker_stub \
-    libscvePanorama \
-    libscvePanorama_lite \
     libsdm-color \
     libsdm-diag \
     libsdm-disp-vndapis \
@@ -291,10 +281,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client@1.0 \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
-    vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper \
-    vendor.qti.hardware.scve.objecttracker@1.0 \
-    vendor.qti.hardware.scve.panorama@1.0-adapter-helper \
-    vendor.qti.hardware.scve.panorama@1.0 \
     vendor.qti.ims.callinfo@1.0_vendor \
     vendor.qti.ims.rcsconfig@1.0_vendor \
     vendor.qti.imsrtpservice@2.0_vendor \
@@ -650,9 +636,6 @@ PRODUCT_PACKAGES += \
     libdspCV_skel \
     libfastcvadsp \
     libfastcvadsp_skel \
-    libscveBlobDescriptor_skel \
-    libscveObjectSegmentation_skel \
-    libscveT2T_skel \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
