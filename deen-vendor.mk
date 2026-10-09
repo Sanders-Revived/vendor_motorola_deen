@@ -209,7 +209,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.voiceprint@1.0 \
     audio.motvr.default \
-    audio.primary.msm8953 \
     camera.msm8953 \
     sound_trigger.primary.default \
     libDepthBokehEffect \
@@ -635,11 +634,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.1 \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
-    vendor_lib_rfsa_adsp_libadsp_fd_skel_so \
-    vendor_lib_rfsa_adsp_libapps_mem_heap_so \
-    vendor_lib_rfsa_adsp_libdspCV_skel_so \
-    vendor_lib_rfsa_adsp_libfastcvadsp_so \
-    vendor_lib_rfsa_adsp_libfastcvadsp_skel_so \
+    libadsp_fd_skel \
+    libapps_mem_heap \
+    libdspCV_skel \
+    libfastcvadsp \
+    libfastcvadsp_skel \
     com.qualcomm.qti.ant@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     lib-imsvideocodec \
@@ -730,3 +729,8 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
+
+PRODUCT_PACKAGES += \
+    libcdsprpc
+PRODUCT_PACKAGES += \
+    libqcbor

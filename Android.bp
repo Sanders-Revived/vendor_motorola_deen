@@ -7,8 +7,11 @@ soong_namespace {
         "device/motorola/deen",
         "hardware/motorola",
         "hardware/qcom-caf/msm8996",
+        "hardware/qcom-caf/msm8996/display",
+        "hardware/qcom-caf/msm8996/media/libc2dcolorconvert",
         "hardware/qcom-caf/wlan",
         "vendor/qcom/opensource/dataservices",
+        "vendor/qcom/opensource/display",
     ],
 }
 
@@ -72,7 +75,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "android.hidl.base@1.0",
-                "vendor.qti.hardware.fm@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -99,6 +101,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
 }
 
@@ -571,8 +574,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "liblog",
                 "libutils",
-                "vendor.qti.hardware.fm@1.0",
-                "android.hardware.bluetooth@1.0-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -599,6 +600,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
@@ -2253,7 +2255,7 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "liblog",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc",
             ],
         },
@@ -2266,7 +2268,7 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "liblog",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc",
             ],
         },
@@ -2753,7 +2755,7 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "liblog",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc",
             ],
         },
@@ -2766,7 +2768,7 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "liblog",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc",
             ],
         },
@@ -3004,7 +3006,7 @@ cc_prebuilt_library_shared {
                 "libz",
                 "libc",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
             ],
         },
         android_arm64: {
@@ -3016,7 +3018,7 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "liblog",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc",
             ],
         },
@@ -3492,43 +3494,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "audio.primary.msm8953",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/audio.primary.msm8953.so",
-            ],
-            shared_libs: [
-                "libaudioutils",
-                "liblog",
-                "libprocessgroup",
-                "libtinyalsa",
-                "libtinycompress_vendor",
-                "libaudioroute",
-                "libmotaudioutils",
-                "libexpat",
-                "libhardware",
-                "libbase",
-                "libhidlbase",
-                "libutils",
-                "android.hardware.power@1.2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
 
 cc_prebuilt_library_shared {
     name: "camera.msm8953",
@@ -3619,7 +3584,7 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libGLESv3",
                 "libdl",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libm",
                 "libc",
             ],
@@ -3646,7 +3611,7 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libGLESv3",
                 "libdl",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libm",
                 "libc",
             ],
@@ -3918,7 +3883,7 @@ cc_prebuilt_library_shared {
                 "libz",
                 "libc",
                 "libm",
-                "libstdc++",
+                "libstdc++_vendor",
             ],
         },
     },
@@ -7709,7 +7674,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libdl",
                 "libcutils",
-                "libstdc++",
+                "libstdc++_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8771,7 +8736,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libmmcamera_llvd.so",
             ],
             shared_libs: [
-                "libllvd_smore",
                 "libdl",
                 "libcutils",
                 "liblog",
@@ -8782,6 +8746,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -9266,7 +9231,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libmmcamera_trueportrait_lib.so",
             ],
             shared_libs: [
-                "libtrueportrait",
                 "libdl",
                 "libcutils",
                 "liblog",
@@ -9277,6 +9241,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -9324,7 +9289,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libmmcamera2_mct",
                 "libmmcamera_dbg",
-                "libwui",
                 "libEGL",
                 "libGLESv2",
                 "lib_motsensorlistener",
@@ -9338,6 +9302,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -9498,7 +9463,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libui",
-                "libwui",
                 "libEGL",
                 "libGLESv2",
                 "libqdMetaData",
@@ -9513,6 +9477,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -9735,29 +9700,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libtinyalsa",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libtinyalsa.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
 
 cc_prebuilt_library_shared {
     name: "libtinycompress",
@@ -12989,7 +12931,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.radio@1.5",
                 "android.hardware.radio.deprecated@1.0",
                 "qtimutex",
-                "libprotobuf-cpp-full-3.9.1_deen",
+                "libprotobuf-cpp-full-3.9.1-vendorcompat",
                 "libvndksupport",
                 "libbase",
                 "libz",
@@ -13148,7 +13090,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libhidlbase",
-                "vendor.qti.hardware.tui_comm@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -13157,6 +13098,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -15739,7 +15681,7 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_rfsa {
-    name: "vendor_lib_rfsa_adsp_libadsp_fd_skel_so",
+    name: "libadsp_fd_skel",
     filename: "libadsp_fd_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libadsp_fd_skel.so",
@@ -15748,7 +15690,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "vendor_lib_rfsa_adsp_libapps_mem_heap_so",
+    name: "libapps_mem_heap",
     filename: "libapps_mem_heap.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so",
@@ -15757,7 +15699,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "vendor_lib_rfsa_adsp_libdspCV_skel_so",
+    name: "libdspCV_skel",
     filename: "libdspCV_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so",
@@ -15766,7 +15708,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "vendor_lib_rfsa_adsp_libfastcvadsp_so",
+    name: "libfastcvadsp",
     filename: "libfastcvadsp.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so",
@@ -15775,7 +15717,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "vendor_lib_rfsa_adsp_libfastcvadsp_skel_so",
+    name: "libfastcvadsp_skel",
     filename: "libfastcvadsp_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so",
@@ -17912,4 +17854,100 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib64/libq3dtools_adreno.so",
     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
+}
+
+// The 64-bit FM HIDL interface is shipped with the device blobs and is needed
+// by libfm-hci and the FM implementation.
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.fm@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcdsprpc",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcdsprpc.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcdsprpc.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcbor",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcbor.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqcbor.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
 }
