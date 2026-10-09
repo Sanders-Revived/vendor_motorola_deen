@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/deen/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/imsrcsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsrcsd.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
-    vendor/motorola/deen/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/motorola.hardware.audio.adspd@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/motorola.hardware.audio.adspd@1.0-service.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/motorola/deen/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
@@ -127,6 +126,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/deen/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    fm_helium \
+    libfm-hci \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -137,6 +138,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.keymaster@3.0-impl-qti \
     gatekeeper.msm8953 \
+    vendor.qti.hardware.fm@1.0-impl \
     vulkan.msm8953 \
     libC2D2 \
     libCB \
@@ -155,7 +157,6 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcapiv2svacnn \
     libcapiv2vop \
-    libcdsprpc \
     libdiag \
     libdisp-aba \
     libfastcvadsp_stub \
@@ -179,7 +180,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_tintless_algo \
     libmmcamera_tintless_bg_pca_algo \
     liboptizoom \
-    libqcbor \
     libqmi_cci \
     libqmi_common_so \
     libqmi_encdec \
@@ -196,11 +196,9 @@ PRODUCT_PACKAGES += \
     libsensor_reg \
     libsensorndkbridge \
     libthermalclient \
-    libtime_genoff \
     libtinyxml2_1 \
     libubifocus \
     libvideoutils \
-    libxml \
     sensor_calibrate \
     sensors.rp \
     sensors.ssc \
@@ -405,6 +403,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_sub_module \
     libmmcamera_isp_template \
     libmmcamera_isp_wb40 \
+    libmmcamera_llvd \
     libmmcamera_mot_imx214 \
     libmmcamera_optizoom_lib \
     libmmcamera_ov13855_f13855ab \
@@ -422,6 +421,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_stillmore_lib \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
+    libmmcamera_trueportrait_lib \
     libmmcamera_ubifocus_lib \
     libmmcamera_vstab_module \
     libmmjpeg \
@@ -438,6 +438,7 @@ PRODUCT_PACKAGES += \
     libqomx_jpegenc \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
+    libtinyalsa \
     libtinycompress \
     libtinycompress_vendor \
     libunshorten \
@@ -455,14 +456,12 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2 \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModule \
-    fm_helium \
     android.hardware.bluetooth@1.0-impl-qti \
     com.dsi.ant@1.0-impl \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
     vendor.qti.hardware.btconfigstore@1.0-impl \
     vendor.qti.hardware.btconfigstore@2.0-impl \
-    vendor.qti.hardware.fm@1.0-impl \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -478,6 +477,8 @@ PRODUCT_PACKAGES += \
     lib-uceservice \
     libGPreqcancel \
     libGPreqcancel_svc \
+    libSecureUILib \
+    libStDrvInt \
     libbt-hidlclient \
     libbtnv \
     libcdfw \
@@ -495,7 +496,6 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libets_fp_et5 \
     libets_teeclient \
-    libfm-hci \
     libgdtap \
     libgnsspps \
     libhdcpsrm \
@@ -524,7 +524,6 @@ PRODUCT_PACKAGES += \
     libperfioctl \
     libperipheral_client \
     libpn553_fw \
-    libprotobuf-cpp-full-3.9.1_deen \
     libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
@@ -549,15 +548,19 @@ PRODUCT_PACKAGES += \
     libril-qc-logger \
     librilqmiservices \
     librpmb \
+    libsecureui \
+    libsecureui_svcsock \
     libsoc_helper \
     libspl \
     libssd \
     libsystem_health_mon \
     libthermalioctl \
+    libtime_genoff \
     libvpplibrary \
     libwms \
     libwqe \
     libwvhidl \
+    libxml \
     libxtadapter \
     qcrild_librilutils \
     qtibus \
@@ -588,7 +591,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.latency@1.0 \
     vendor.qti.hardware.data.lce@1.0 \
     vendor.qti.hardware.data.qmi@1.0 \
-    vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
