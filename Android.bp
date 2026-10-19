@@ -241,6 +241,7 @@ cc_prebuilt_library_shared {
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -373,6 +374,7 @@ cc_prebuilt_library_shared {
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -414,6 +416,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "both",
     relative_install_path: "egl",
     prefer: true,
+    check_elf_files: false,
     soc_specific: true,
 }
 
@@ -6895,6 +6898,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -7614,6 +7618,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "32",
     prefer: true,
     soc_specific: true,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
